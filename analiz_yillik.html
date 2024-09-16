@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.webp">
+    <!-- Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" 
+    rel="stylesheet">
+    <!-- styleshhet -->
+     <link rel="stylesheet" href="./analiz.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yıllık Analiz</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./public/logo.webp">
+            <h2><span class="locked-text">YEMEK</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="index.html">
+            <span class="material-icons-sharp">dashboard</span>
+            <h3>Gösterge Paneli</h3>
+          </a>
+          <a href="people.html">
+            <span class="material-icons-sharp">people</span>
+            <h3>Müşteriler</h3>
+          </a>
+          <a href="orders.html">
+            <span class="material-icons-sharp">receipt_long</span>
+            <h3>Son Siparişler</h3>
+          </a>
+          <a href="javascript:void(0)" id="analizLink" class="active" onclick="toggleAnalizMenu()">
+            <span class="material-icons-sharp">equalizer</span>
+            <h3>Analiz</h3>
+          </a>
+          <div id="analizMenu" style="display: none; margin-left: 20px;">
+            <a href="analiz_haftalik.html"><span class="material-icons-sharp">equalizer</span>Haftalık</a>
+            <a href="analiz_aylik.html"><span class="material-icons-sharp">equalizer</span>Aylık</a>
+            <a class="active" href="analiz_yillik.html"><span class="material-icons-sharp">equalizer</span>Yıllık</a><a></a>
+        </div>
+          <a href="message.html">
+            <span class="material-icons-sharp">forum</span>
+            <h3>Mesajlar</h3>
+            <span class="mesaj_sayisi">99+</span>
+          </a>
+          <a href="menu.html">
+            <span class="material-icons-sharp">restaurant_menu</span>
+            <h3>Menü</h3>
+          </a>
+          <a href="settings.html">
+            <span class="material-icons-sharp">engineering</span>
+            <h3>Ayarlar</h3>
+          </a>
+          <a href="login.html">
+            <span class="material-icons-sharp">logout</span>
+            <h3>Çıkış</h3>
+          </a>
+        </div>
+      </aside>
+      <main>
+        <h1>Yıllık Analiz</h1>
+        <form>
+          <div class="search">
+            <span class="search-icon material-icons-sharp">search</span>
+            <input class="search-input" type="search" placeholder="search">
+          </div>
+        </form>
+        <div class="insights">
+          <div class="sales">
+            <span class="material-icons-sharp">leaderboard</span>
+            <div class="middle">
+              <div class="left">
+                <h3>Yıllık Kazanç</h3>
+                <h1>1.353.453₺</h1>
+                <h3>Yıllık Harcama</h3>
+                <h1>803.450₺</h1>
+              </div>
+              <div class="progress">
+                <canvas id="yillik_grafik3" width="0" height="0"></canvas>
+              </div>
+            </div>
+            <div class="small2">
+              <small class="locked-text">Bu Yılki Kazanç</small>
+            </div>
+          </div>
+          <div class="expenses">
+            <span class="material-icons-sharp">trending_down</span>
+            <div class="middle">
+              <div class="left">
+                <h3>En Az Satılanlar</h3>
+                <h2>1-Meze</h1>
+                <h2>2-Acı Biber Turşusu</h1>
+                <h2>3-Kelle Paça Çorbası</h1>
+              </div>
+              <div class="progress">
+                <canvas id="yillik_grafik2" width="0" height="0"></canvas>
+              </div>
+            </div>
+            <small class="locked-text">Son 1 yıl</small>
+          </div>
+          <div class="income">
+            <span class="material-icons-sharp">
+              trending_up
+              </span>
+            <div class="middle">
+              <div class="left">
+                <h3>En Çok Satılanlar</h3>
+                <h2>1-Kıymalı Pide</h1>
+                <h2>2-Adana Kebap</h1>
+                <h2>3-Lahmacun</h1>
+              </div>
+              <div class="progress">
+                <canvas id="yillik_grafik" width="0" height="0"></canvas>
+              </div>
+            </div>
+            <small class="locked-text">Son 1 yıl</small>
+          </div>
+        </div>
+        <div class="charts">
+          <div>
+            <canvas id="myChart" width="800" height="300"></canvas>
+          </div>
+        </div>
+      </main>
+      <div class="right">
+        <div class="top">
+          <button id="menu-btn">
+            <span class="material-icons-sharp">menu</span>
+          </button>
+          <div class="arkaplan_modu">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+          </div>
+          <div class="profile">
+            <div class="info">
+              <p>Hey, <b>Muhammed Ali</b></p>
+              <small class="locked-text">Admin</small>
+            </div>
+            <div class="profile_photo">
+              <img src="./public/profile.jpg">
+            </div>
+          </div>
+        </div>
+        <div class="recent_update">
+          <h2>Son Gelen Siparişler</h2>
+          <div class="updates">
+            <div class="update">
+              <div class="profile-photo">
+                <img src="./public/profile.jpg">
+              </div>
+              <div class="message">
+                <p><b>Abdullah</b> Telefon üzerinden <b>İskender (1.5 porsiyon)</b> siparişi verdi.</p>
+                <small class="locked-text">16 dakika önce</small>
+              </div>
+            </div>
+            <div class="update">
+              <div class="profile-photo">
+                <img src="./public/profile.jpg">
+              </div>
+              <div class="message">
+                <p><b>Gürkan</b> Yemek sepeti <b>Lahmacun</b> siparişi verdi.</p>
+                <small class="locked-text">Bugün Saat 16:49</small>
+              </div>
+            </div>
+            <div class="update">
+              <div class="profile-photo">
+                <img src="./public/profile.jpg">
+              </div>
+              <div class="message">
+                <p><b>Muhammed</b> Dükkandan <b>Adana Kebap</b> siparişi verdi.</p>
+                <small class="locked-text">Bugün Saat 16:30</small>
+              </div>
+            </div>
+          </div>
+          <div class="menu-out">
+            <div>
+                <span class="material-icons-sharp">add</span>
+              <a href="menu.html">Son Gelen Siparişleri Onaylamaya Git</a>
+            </div>
+          </div>
+        </div>
+        <div class="analiz">
+          <h2>Satış Analizi</h2>
+          <div class="item store orders">
+            <div class="icon">
+              <span class="material-icons-sharp">store</span>
+            </div>
+            <div class="right">
+              <div class="info">
+                <h3>Dükkanda Sipariş</h3>
+                <small class="locked-text">Son 1 yıl</small>
+              </div>
+              <h5 class="success">23%</h5>
+              <h3>473.709₺</h3>
+            </div>
+          </div>
+          <div class="item offline orders">
+            <div class="icon">
+              <span class="material-icons-sharp">shopping_cart</span>
+            </div>
+            <div class="right">
+              <div class="info">
+                <h3>Online Sipariş</h3>
+                <small class="locked-text">Son 1 yıl</small>
+              </div>
+              <h5 class="danger">-48%</h5>
+              <h3>338.3631₺</h3>
+            </div>
+          </div>
+          <div class="item phone orders">
+            <div class="icon">
+              <span class="material-icons-sharp">phone</span>
+            </div>
+            <div class="right">
+              <div class="info">
+                <h3>Telefonda Sipariş</h3>
+                <small class="locked-text">Son 1 yıl</small>
+              </div>
+              <h5 class="success">+62%</h5>
+              <h3>541.381₺</h3>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./yillik_grafik.js"></script>
+  <script src="./index.js"></script>
+</html>

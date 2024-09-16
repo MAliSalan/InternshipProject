@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" 
+    rel="stylesheet">
+    <title>Menu</title>
+    <link rel="stylesheet" href="./menu.css">
+</head>
+<body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./public/logo.webp">
+            <h2><span class="locked-text">YEMEK</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="index.html">
+            <span class="material-icons-sharp">dashboard</span>
+            <h3>Gösterge Paneli</h3>
+          </a>
+          <a href="people.html">
+            <span class="material-icons-sharp">people</span>
+            <h3>Müşteriler</h3>
+          </a>
+          <a href="orders.html">
+            <span class="material-icons-sharp">receipt_long</span>
+            <h3>Son Siparişler</h3>
+          </a>
+          <a href="javascript:void(0)" id="analizLink" onclick="toggleAnalizMenu()">
+            <span class="material-icons-sharp">equalizer</span>
+            <h3>Analiz</h3>
+          </a>
+          <div id="analizMenu" style="display: none; margin-left: 20px;">
+              <a href="analiz_haftalik.html"><span class="material-icons-sharp">equalizer</span>Haftalık</a>
+              <a href="analiz_aylik.html"><span class="material-icons-sharp">equalizer</span>Aylık</a>
+              <a href="analiz_yillik.html"><span class="material-icons-sharp">equalizer</span>Yıllık</a><a></a>
+          </div>
+          <a href="message.html">
+            <span class="material-icons-sharp">forum</span>
+            <h3>Mesajlar</h3>
+            <span class="mesaj_sayisi">99+</span>
+          </a>
+          <a href="menu.html"  class="active">
+            <span class="material-icons-sharp">restaurant_menu</span>
+            <h3>Menü</h3>
+          </a>
+          <a href="settings.html">
+            <span class="material-icons-sharp">engineering</span>
+            <h3>Ayarlar</h3>
+          </a>
+          <a href="">
+            <span class="material-icons-sharp">logout</span>
+            <h3>Çıkış</h3>
+          </a>
+        </div>
+      </aside>
+        <main>
+          <h1 class="down">Menu</h1>
+        <form>
+          <div class="search">
+            <span class="search-icon material-icons-sharp">search</span>
+            <input class="search-input" type="search" placeholder="Ara">
+          </div>
+        </form>
+        <div class="menu_tablo">
+          <div class="menu">
+            <img src="./public/adana-kebap-v2.jpg" class="product-image">
+            <div class="product-info">
+                <div class="portion">
+                    <h1 class="red"><b>Adana Kebap</b></h1>
+                    <h1><b>Ürün Porsiyonu ve Fiyatları:</b></h1>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>200₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1.5 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>295₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>2 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>390₺</b></h2></span>
+                    </div>
+                </div>
+                <div class="update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"> <b>fiyat güncelle</b></a>
+                    </div>
+                </div>
+                
+                <div class="portion-update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"><b>Porsiyon Güncelle</b> </a>
+                    </div>
+                </div>
+            </div> 
+          </div>
+          <div class="menu">
+            <img src="./public/adana-kebap-v2.jpg" class="product-image">
+            <div class="product-info">
+                <div class="portion">
+                  <h1 class="red"><b>Urfa Kebap</b></h1>
+                  <h1><b>Ürün Porsiyonu ve Fiyatları:</b></h1>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>200₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1.5 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>295₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>2 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>390₺</b></h2></span>
+                    </div>
+                </div>
+                <div class="update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"> <b>fiyat güncelle</b></a>
+                    </div>
+                </div>
+                
+                <div class="portion-update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"><b>Porsiyon Güncelle</b> </a>
+                    </div>
+                </div>
+            </div> 
+          </div>
+          <div class="menu">
+            <img src="./public/images.jpg" class="product-image">
+            <div class="product-info">
+                <div class="portion">
+                  <h1 class="red"><b>Kuşbaşılı Karşlı Pide</b></h1>
+                  <h1><b>Ürün Porsiyonu ve Fiyatları:</b></h1>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>250₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1.5 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>370₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>2 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>485₺</b></h2></span>
+                    </div>
+                </div>
+                <div class="update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"> <b>fiyat güncelle</b></a>
+                    </div>
+                </div>
+                
+                <div class="portion-update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"><b>Porsiyon Güncelle</b> </a>
+                    </div>
+                </div>
+            </div> 
+          </div>
+          <div class="menu">
+            <img src="./public/kelle-paca-corbasi-yeni.jpg" class="product-image">
+            <div class="product-info">
+                <div class="portion">
+                  <h1 class="red"><b>Kelle Paça Çorbası</b></h1>
+                  <h1><b>Ürün Porsiyonu ve Fiyatları:</b></h1>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>140₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1.5 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>210₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>2 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>275₺</b></h2></span>
+                    </div>
+                </div>
+                <div class="update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"> <b>fiyat güncelle</b></a>
+                    </div>
+                </div>
+                
+                <div class="portion-update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"><b>Porsiyon Güncelle</b> </a>
+                    </div>
+                </div>
+            </div> 
+          </div>
+          <div class="menu">
+            <img src="./public/images_lahmacun.jpg" class="product-image">
+            <div class="product-info">
+                <div class="portion">
+                  <h1 class="red"><b>Lahmacun</b></h1>
+                  <h1><b>Ürün Porsiyonu ve Fiyatları:</b></h1>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1 Adet</b></h2></span>
+                        <span class="portion-cost"><h2><b>100₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>2 Adet</b></h2></span>
+                        <span class="portion-cost"><h2><b>195₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>3 Adet</b></h2></span>
+                        <span class="portion-cost"><h2><b>290₺</b></h2></span>
+                    </div>
+                </div>
+                <div class="update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"> <b>fiyat güncelle</b></a>
+                    </div>
+                </div>
+                
+                <div class="portion-update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"><b>Porsiyon Güncelle</b> </a>
+                    </div>
+                </div>
+            </div> 
+          </div>
+          <div class="menu">
+            <img src="./public/pide.jpg" class="product-image">
+            <div class="product-info">
+                <div class="portion">
+                  <h1 class="red"><b>Kıymalı Pide</b></h1>
+                  <h1><b>Ürün Porsiyonu ve Fiyatları:</b></h1>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>150₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>1.5 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>220₺</b></h2></span>
+                    </div>
+                    <div class="portion-price">
+                        <span class="portion-size"><h2><b>2 Porsiyon</b></h2></span>
+                        <span class="portion-cost"><h2><b>290₺</b></h2></span>
+                    </div>
+                </div>
+                <div class="update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"> <b>fiyat güncelle</b></a>
+                    </div>
+                </div>
+                
+                <div class="portion-update">
+                    <div>
+                        <span class="material-icons-sharp">add</span>
+                    <a href="index.html"><b>Porsiyon Güncelle</b> </a>
+                    </div>
+                </div>
+            </div> 
+          </div>
+        </div>
+        </main>
+          <div class="right">
+            <div class="top">
+              <button id="menu-btn">
+                <span class="material-icons-sharp">menu</span>
+              </button>
+              <div class="arkaplan_modu">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+              </div>
+              <div class="profile">
+                <div class="info">
+                  <p>Hey, <b>Muhammed Ali</b></p>
+                  <small class="locked-text">Admin</small>
+                </div>
+                <div class="profile_photo">
+                  <img src="./public/profile.jpg">
+                </div>
+              </div>
+            </div>
+            <div class="recent_update">
+              <h2>Son Gelen Siparişler</h2>
+              <div class="updates">
+                <div class="update">
+                  <div class="profile-photo">
+                    <img src="./public/profile.png">
+                  </div>
+                  <div class="message">
+                    <p><b>Abdullah</b> Telefon üzerinden <b>İskender (1.5 porsiyon)</b> siparişi verdi.</p>
+                    <small class="locked-text">16 dakika önce</small>
+                  </div>
+                </div>
+                <div class="update">
+                  <div class="profile-photo">
+                    <img src="./public/profile1.png">
+                  </div>
+                  <div class="message">
+                    <p><b>Gürkan</b> Yemek sepeti <b>Lahmacun</b> siparişi verdi.</p>
+                    <small class="locked-text">Bugün Saat 16:49</small>
+                  </div>
+                </div>
+                <div class="update">
+                  <div class="profile-photo">
+                    <img src="./public/profile.jpg">
+                  </div>
+                  <div class="message">
+                    <p><b>Muhammed</b> Dükkandan <b>Adana Kebap</b> siparişi verdi.</p>
+                    <small class="locked-text">Bugün Saat 16:30</small>
+                  </div>
+                </div>
+              </div>
+              <div class="menu-cikra">
+                <div>
+                    <span class="material-icons-sharp">add</span>
+                  <a href="orders.html">Son Gelen Siparişleri Onaylamaya Git</a>
+                </div>
+              </div>
+              <div class="menu-cikra">
+                <div>
+                    <span class="material-icons-sharp">add</span>
+                  <a href="settings.html">Menuye Yeni Ürün Eklemeye Git</a>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --color-primary:#7380ec;
+    --color-danger:#ff7782;
+    --color-success:#41f1b6;
+    --color-warning:#ffbb55;
+    --color-white:#fff;
+    --color-info-dark:#7d8da1;
+    --color-info-light:#dce1eb;
+    --color-dark:#363949;
+    --color-light:rgba(132, 139, 200, 0.18);
+    --color-primary-variant:#111e88;
+    --color-dark-variant:#677483;
+    --color-background:#f6f6f9;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+.dark-theme{
+    --color-background: #181a1e;
+    --color-white:#202528;
+    --color-dark:#edeffd;
+    --color-dark-variant:#a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 0.5rem 0.6rem white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    width: 98%;
+    margin: 0 auto;
+    gap: 29px;
+    grid-template-columns: 14rem auto 23rem;
+}
+aside{
+    height: 700px;
+}
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px ;
+}
+aside .top h2{
+    margin: 1rem;
+}
+aside .logo{
+    display: flex;
+    gap: 6px;
+}
+aside .logo img{
+    width: 32px;
+    height: 32px;
+}
+aside .close{
+    display: none;
+}
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+aside h3{
+    font-weight: 500;
+}
+aside .sidebar a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 283ms ease;
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 283ms ease;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+aside .sidebar a:active{
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+aside .sidebar a.active:before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+aside .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(16px-3px);
+}
+aside .sidebar a:hover{
+    color:var(--color-primary);
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+aside .sidebar .mesaj_sayisi{
+    background: var(--color-danger);
+    color:var(--color-white);
+    padding: 2px 3px;
+    font-size: 14px;
+    border-radius: var(--border-radius-1);
+}
+@keyframes showMenu {
+    to{
+        left: 0;
+    }
+}
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: Montserrat,sans-serif;
+    font-size: 0.88em;
+    background: var(--color-background);
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+main{
+    margin-top: 1.4rem;
+}
+main h1.down{
+    margin-bottom: 1rem;
+}
+main .search{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 18px;
+    background: var(--color-info-light);
+    margin-bottom: 1rem;
+}
+main .search-input{
+    font-size: 16px;
+    color: black;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 300px;
+}
+main .search-input::placeholder,main .search-icon{
+    color: black;
+}
+main .insights{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.3rem;
+}
+
+main .insights > div:hover{
+    box-shadow: var(--box-shadow);
+}
+main .settings a {
+    font-size: 30px;
+    font-style: italic;
+    color: var(--color-primary);
+}
+
+main .insights > div span{
+    text-align: right;
+    background: red;
+    padding: 2px;
+    border-radius: 80%;
+    color: var(--color-white);
+    font-size: 32px;
+}
+main .insights > div.expenses span{
+    background: var(--color-danger);
+}
+main .insights > div.income span{
+    background: var(--color-success);
+}
+
+main .insights .progress2{
+    text-align: right;
+    width: 561px;
+    height: 40px;
+    border-radius: 30%;
+}
+main .insights .progress3{
+    text-align: right;
+    width: 384px;
+    height: 40px;
+    border-radius: 30%;
+}
+main .insights .progress4{
+    text-align: right;
+    width: 637px;
+    height: 40px;
+    border-radius: 30%;
+}
+main .insights .progress5{
+    text-align: right;
+    width: 421px;
+    height: 40px;
+    border-radius: 30%;
+}
+main .insights .progress6{
+    text-align: right;
+    width: 412px;
+    height: 40px;
+    border-radius: 30%;
+}
+main .insights .progress7{
+    text-align: right;
+    width: 341px;
+    height: 40px;
+    border-radius: 30%;
+}
+main .settings{
+    background: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.3rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: none;
+    transition: all 283ms ease;
+}
+.right{
+    margin-top: 1.4rem;
+}
+.right .top{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+.right .top button{
+    display: none;
+}
+.right .arkaplan_modu{
+    background: var(--color-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.6rem;
+    width: 4.2rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-1);
+}
+.right .arkaplan_modu span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right .arkaplan_modu span.active{
+    background: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius-1);
+}
+.right .top .profile{
+    display: flex;
+    gap: 2rem;
+    text-align: right;
+}
+a{
+    color:var(--color-dark);
+}
+.right img{
+    border: 1px solid var(--color-dark-variant);
+    border-radius: 80%;
+    display: block;
+    width:45%;
+}
+.container .logo img{
+    border-radius: 100%;
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+.right .recent_update .update img{
+    display: block;
+    width:110%;
+}
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 24px;
+}
+h3{
+    font-size: 0.85rem;
+}
+h4{
+    font-size: 0.75rem;
+}
+small{
+    font-size: 0.70rem;
+}
+.profile-picture{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow-x: hidden;
+}
+.locked-text{
+    color: rgb(214, 35, 35);
+}
+p{
+    color: var(--color-dark-variant);
+}
+b{
+    color: var(--color-dark);
+}
+.primary{
+    color: var(--color-primary);
+}
+.danger{
+    color: var(--color-danger);
+}
+.success{
+    color: var(--color-success);
+}
+.wait{
+    color: orange;
+}
+.warning{
+    color: var(--color-warning);
+}
+@media screen and (max-width:1280px) {
+    .container{
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+    }
+    aside .logo h2{
+        display: none;
+    }
+    aside .sidebar h3{
+        display: none;
+    }
+    aside .sidebar a{
+        width: 5.6rem;
+    }
+    aside .sidebar a:last-child{
+        position: relative;
+        margin-top: 1.8rem;
+    }
+    main .insights{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    main .insights .progress{
+        width: 50px;
+        height: 40px;
+        border-radius: 30%;
+    }
+}
+@media screen and (max-width: 868px){
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        position: fixed;
+        left: -100%;
+        background: var(--color-white);
+        width: 18rem;
+        z-index: 3;
+        box-shadow: 1rem 3rem 4rem var(--color-light);
+        height: 100vh;
+        padding-right: var(--card-padding);
+        display: none;
+        animation: showMenu 800ms ease forwards;
+    }
+    @keyframes showMenu {
+        to{
+            left: 0;
+        }
+    }
+    aside .logo{
+        margin-left: 1rem;
+    }
+    aside .logo h2{
+        display: inline;
+    }
+    aside .sidebar h3{
+        display: inline;
+    }
+    aside .sidebar a{
+        width: 100%;
+        height: 3.4rem;
+    }
+    aside .sidebar a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+    aside .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+    main{
+        margin-top: 8rem;
+        padding: 0 1rem;
+    }
+    main .insights .progress{
+        text-align: right;
+        width: 70px;
+        height: 40px;
+        border-radius: 30%;
+    }
+    .right{
+        width: 94%;
+        margin: 0 auto 4rem;
+    }
+    .right .top{
+        position: fixed;
+        top: 0;
+        left: 0;
+        align-items: center;
+        padding: 0 0.8rem;
+        height: 4.6rem;
+        background: var(--color-white);
+        width: 100%;
+        margin: 0;
+        z-index: 2;
+        box-shadow: 0 1rem 1rem var(--color-light);
+    }
+    .right .top .arkaplan_modu{
+        width: 4.4rem;
+        position: absolute;
+        left: 66%;
+    }
+    .right .profile .info{
+        display: none;
+    }
+    .right .top button{
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        color: var(--color-dark);
+        position: absolute;
+        left: 1rem;
+    }
+    .right .top button span{
+        font-size: 2rem;
+    }
+    
+}

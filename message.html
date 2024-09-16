@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.webp">
+    <!-- Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" 
+    rel="stylesheet">
+    <!-- styleshhet -->
+    <link rel="stylesheet" href="./message.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlar</title>
+  </head>
+  <body>
+    <template class="reply-input-template">
+      <div class="reply-input container">
+        <img src="./public/profile.jpg" alt="" class="usr-img">
+        <textarea class="cmnt-input" placeholder="Yanıt Yaz..."></textarea>
+        <button class="bu-primary">Yolla</button>
+      </div>
+    </template>
+  
+    <template class="comment-template">
+      <div class="comment-wrp">
+        <div class="comment container">
+          <div class="c-controls">
+            <a  class="delete"><span class="material-icons-sharp">delete</span>Sil</a>
+            <a  class="edit"><span class="material-icons-sharp">edit</span>Düzenle</a>
+            <a  class="reply"><span class="material-icons-sharp">reply</span>Yanıtla</a>
+          </div>
+          <div class="c-user">
+            <img src="./public/profile.jpg" alt="" class="usr-img">
+            <p class="usr-name">qweqwe</p>
+            <p class="cmnt-at">qweqwe</p>    
+          </div>
+          <div class="c-footer">
+            <p class="hiz">Hız: 10/10</p>
+            <p class="servis">Servis: 10/10</p>
+            <p class="lezzet">Lezzet: 10/10</p>    
+          </div>
+          <p class="c-text">
+            <span class="reply-to"></span>
+            <span class="c-body"></span>
+          </p>
+        </div>
+        <div class="replies comments-wrp">
+        </div>
+      </div>
+    </template>
+    <div class="container">
+      <aside>
+        <div class="top">
+        <div class="logo">
+            <img src="./public/logo.webp">
+            <h2><span class="locked-text">YEMEK</span></h2>
+        </div>
+        <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+        </div>
+        </div>
+        <div class="sidebar">
+        <a href="index.html">
+            <span class="material-icons-sharp">dashboard</span>
+            <h3>Gösterge Paneli</h3>
+        </a>
+        <a href="people.html">
+            <span class="material-icons-sharp">people</span>
+            <h3>Müşteriler</h3>
+        </a>
+        <a href="orders.html">
+            <span class="material-icons-sharp">receipt_long</span>
+            <h3>Son Siparişler</h3>
+        </a>
+        <a href="javascript:void(0)" id="analizLink" onclick="toggleAnalizMenu()">
+            <span class="material-icons-sharp">equalizer</span>
+            <h3>Analiz</h3>
+        </a>
+        <div id="analizMenu" style="display: none; margin-left: 20px;">
+            <a href="analiz_haftalik.html"><span class="material-icons-sharp">equalizer</span>Haftalık</a>
+            <a href="analiz_aylik.html"><span class="material-icons-sharp">equalizer</span>Aylık</a>
+            <a href="analiz_yillik.html"><span class="material-icons-sharp">equalizer</span>Yıllık</a><a></a>
+        </div>
+        <a href="message.html"  class="active">
+            <span class="material-icons-sharp">forum</span>
+            <h3>Mesajlar</h3>
+            <span class="mesaj_sayisi">99+</span>
+        </a>
+        <a href="menu.html">
+            <span class="material-icons-sharp">restaurant_menu</span>
+            <h3>Menü</h3>
+        </a>
+        <a href="settings.html">
+            <span class="material-icons-sharp">engineering</span>
+            <h3>Ayarlar</h3>
+        </a>
+        <a href="login.html">
+            <span class="material-icons-sharp">logout</span>
+            <h3>Çıkış</h3>
+        </a>
+        </div>
+      </aside>
+      <main>
+        <h1>Mesajlarım</h1>
+        <form>
+          <div class="search">
+            <span class="search-icon material-icons-sharp">search</span>
+            <input class="search-input" type="search" placeholder="Ara">
+          </div>
+        </form>
+        <div class="comment-section">
+          <div class="comments-wrp"></div>
+        </div>
+        <div class="modal-wrp invisible">
+          <div class="modal container">
+            <h3>Yanıtınızı Silin!</h3>
+            <button class="close material-icons-sharp">close</button>
+            <p>Silmek İstediğinize Emin Misiniz?</p>
+            <button class="yes">Evet</button>
+            <button class="no">Hayır</button>
+          </div>
+        </div>
+      </main>
+      <div class="right">
+          <div class="top">
+          <button id="menu-btn">
+              <span class="material-icons-sharp">menu</span>
+          </button>
+          <div class="arkaplan_modu">
+              <span class="material-icons-sharp active">light_mode</span>
+              <span class="material-icons-sharp">dark_mode</span>
+          </div>
+          <div class="profile">
+              <div class="info">
+              <p>Hey, <b>Muhammed Ali</b></p>
+              <small class="locked-text">Admin</small>
+              </div>
+              <div class="profile_photo">
+              <img src="./public/profile.jpg">
+              </div>
+          </div>
+          </div>
+          <div class="recent_update">
+            <h2>Son Gelen Siparişler</h2>
+            <div class="updates">
+              <div class="update">
+                <div class="profile-photo">
+                  <img src="./public/profile.png">
+                </div>
+                <div class="message">
+                  <p><b>Abdullah</b> Telefon üzerinden <b>İskender (1.5 porsiyon)</b> siparişi verdi.</p>
+                  <small class="locked-text">16 dakika önce</small>
+                </div>
+              </div>
+              <div class="update">
+                <div class="profile-photo">
+                  <img src="./public/profile1.png">
+                </div>
+                <div class="message">
+                  <p><b>Gürkan</b> Yemek sepeti <b>Lahmacun</b> siparişi verdi.</p>
+                  <small class="locked-text">Bugün Saat 16:49</small>
+                </div>
+              </div>
+              <div class="update">
+                <div class="profile-photo">
+                  <img src="./public/profile.jpg">
+                </div>
+                <div class="message">
+                  <p><b>Muhammed</b> Dükkandan <b>Adana Kebap</b> siparişi verdi.</p>
+                  <small class="locked-text">Bugün Saat 16:30</small>
+                </div>
+              </div>
+            </div>
+            <div class="menu-cikra">
+              <div>
+                  <span class="material-icons-sharp">add</span>
+                <a href="orders.html">Son Gelen Siparişleri Onaylamaya git</a>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+  <script src="messages2.js"></script>
+</html>

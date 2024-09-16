@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/logo.webp">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" 
+    rel="stylesheet">
+     <link rel="stylesheet" href="./settings.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayarlar</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./public/logo.webp">
+            <h2><span class="locked-text">YEMEK</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp">close</span>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a href="index.html">
+            <span class="material-icons-sharp">dashboard</span>
+            <h3>Gösterge Paneli</h3>
+          </a>
+          <a href="people.html">
+            <span class="material-icons-sharp">people</span>
+            <h3>Müşteriler</h3>
+          </a>
+          <a href="orders.html">
+            <span class="material-icons-sharp">receipt_long</span>
+            <h3>Son Siparişler</h3>
+          </a>
+          <a href="javascript:void(0)" id="analizLink" onclick="toggleAnalizMenu()">
+            <span class="material-icons-sharp">equalizer</span>
+            <h3>Analiz</h3>
+          </a>
+          <div id="analizMenu" style="display: none; margin-left: 20px;">
+            <a href="analiz_haftalik.html"><span class="material-icons-sharp">equalizer</span>Haftalık</a>
+            <a href="analiz_aylik.html"><span class="material-icons-sharp">equalizer</span>Aylık</a>
+            <a href="analiz_yillik.html"><span class="material-icons-sharp">equalizer</span>Yıllık</a><a></a>
+        </div>
+          <a href="message.html">
+            <span class="material-icons-sharp">forum</span>
+            <h3>Mesajlar</h3>
+            <span class="mesaj_sayisi">99+</span>
+          </a>
+          <a href="menu.html">
+            <span class="material-icons-sharp">restaurant_menu</span>
+            <h3>Menü</h3>
+          </a>
+          <a href="settings.html" class="active">
+            <span class="material-icons-sharp">engineering</span>
+            <h3>Ayarlar</h3>
+          </a>
+          <a href="login.html">
+            <span class="material-icons-sharp">logout</span>
+            <h3>Çıkış</h3>
+          </a>
+        </div>
+      </aside>
+      <main>
+        <h1 class="down">Ayarlar</h1>
+        <form>
+          <div class="search">
+            <span class="search-icon material-icons-sharp">search</span>
+            <input class="search-input" type="search" placeholder="Ara">
+          </div>
+        </form>
+        <div class="insights">
+          <div class="settings">
+            <a href=""><b>Şifreyi değiştirmek için buraya tıklayınız.</b></a>
+            <div class="progress2">
+              <span class="material-icons-sharp">add</span></div>
+          </div>
+        </div>
+        <div class="insights">
+          <div class="settings">
+            <a href=""><b>Müşteri bilgilerini değiştirmek için buraya tıklayınız.</b></a>
+            <div class="progress3">
+              <span class="material-icons-sharp">add</span>
+          </div>
+        </div>
+        <div class="insights"></div>
+          <div class="settings">
+            <a href=""><b>Menu ayarları için buraya tıklayınız.</b></a>
+            <div class="progress4">
+              <span class="material-icons-sharp">add</span>
+          </div>
+        </div>
+        <div class="insights"></div>
+          <div class="settings">
+            <a href=""><b>Adress bilgisini değiştirmek için buraya tıklayınız.</b></a>
+            <div class="progress5">
+              <span class="material-icons-sharp">add</span>
+          </div>
+        </div>
+        <div class="insights"></div>
+          <div class="settings">
+            <a href=""><b>Telefon bilgisini değiştirmek için buraya tıklayınız.</b></a>
+            <div class="progress6">
+              <span class="material-icons-sharp">add</span>
+          </div>
+        </div>
+        <div class="insights"></div>
+          <div class="settings">
+            <a href=""><b>Müşterilerin rollerini değiştirmek için buraya tıklayınız.</b></a>
+            <div class="progress7">
+              <span class="material-icons-sharp">add</span>
+          </div>
+        </div>
+      </main>
+      <div class="right">
+        <div class="top">
+          <button id="menu-btn">
+            <span class="material-icons-sharp">menu</span>
+          </button>
+          <div class="arkaplan_modu">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+          </div>
+          <div class="profile">
+            <div class="info">
+              <p>Hey, <b>Muhammed Ali</b></p>
+              <small class="locked-text">Admin</small>
+            </div>
+            <div class="profile_photo">
+              <img src="./public/profile.jpg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
